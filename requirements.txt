@@ -1,0 +1,9 @@
+Python Modules:
+
+pip install random
+
+pip install requests
+
+pip install time
+
+pip install colorama
