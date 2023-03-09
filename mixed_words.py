@@ -15,7 +15,7 @@ class game():
         self.GAME_INPUT = self.USER_INPUT("Enter your guess: ")
         if self.GAME_INPUT.lower() == self.SELECT_WORD.lower():
             self.PLAY_AGAIN_INPUT = ""
-            while self.PLAY_AGAIN_INPUT != "y" and self.PLAY_AGAIN_INPUT != "n":
+            while self.PLAY_AGAIN_INPUT != "y" an != "n":
                 self.PLAY_AGAIN_INPUT = self.USER_INPUT(self.GREEN + "GREAT JOB! You got it right! Play again (y/n)? ")
 
                 if self.PLAY_AGAIN_INPUT == "y":
