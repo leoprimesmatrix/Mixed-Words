@@ -56,8 +56,6 @@ class game():
         self.QUEUE_FIND_CHANCE = random.randint(1,4)
         self.CAN_TELEPORT = False
         
-        self.TRIES = 0
-        
         while self.TRIES < 5:  # limit the number of attempts to find a match to 5
             #print(self.QUEUE_FIND_CHANCE)
             self.PRINT(self.BLUE + self.QUEUE_DESC1)
@@ -76,6 +74,8 @@ class game():
                 self.TRIES = self.TRIES + 1
                 self.DESCRIPTION = f"Failed finding match. Stand by! Attempt {self.TRIES}/5."
                 self.PRINT(self.RED + self.DESCRIPTION)
+                self.queue()
+                break
 
         if self.TRIES == 5:
             self.DESCRIPTION = f"Failed to find match after {self.TRIES} attempts. Please re-open the file, if the problem persists, please contact PrimeDev#2349 on Discord."
@@ -133,5 +133,6 @@ class game():
         self.WAIT = time.sleep
         self.PRINT = print
         self.DESCRIPTION = ""
+        self.TRIES = 0
         self.welcome()
 v1 = game()
