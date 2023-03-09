@@ -11,7 +11,12 @@ class game():
     def main_game(self):
         self.SELECT_WORD = random.choice(self.WORD_LIST)
         self.SCAMBLED_WORD = ''.join(random.sample(self.SELECT_WORD, len(self.SELECT_WORD)))
-  NPUT(self.GREEN + "GREAT JOB! You got it right! Play again (y/n)? ")
+        self.PRINT(self.BLUE + f"Your scrambled word is: {self.SCAMBLED_WORD}")
+        self.GAME_INPUT = self.USER_INPUT("Enter your guess: ")
+        if self.GAME_INPUT.lower() == self.SELECT_WORD.lower():
+            self.PLAY_AGAIN_INPUT = ""
+            while self.PLAY_AGAIN_INPUT != "y" and self.PLAY_AGAIN_INPUT != "n":
+                self.PLAY_AGAIN_INPUT = self.USER_INPUT(self.GREEN + "GREAT JOB! You got it right! Play again (y/n)? ")
 
                 if self.PLAY_AGAIN_INPUT == "y":
                     self.queue()
@@ -46,7 +51,8 @@ class game():
         self.QUEUE_FOUND = "Match found!"
         self.QUEUE_JOIN = "Joining Match!"
         self.COOLDOWN = 1
-        self.QUEUE_SELECTEndint(1,5)
+        self.QUEUE_SELECTED_DESCRIPTION = 1
+        self.QUEUE_SEARCH_TIME = random.randint(1,5)
         self.QUEUE_FIND_CHANCE = random.randint(1,4)
         self.CAN_TELEPORT = False
         
@@ -87,7 +93,9 @@ class game():
         self.WELCOME_INPUT.lower()
         self.COOLDOWN = 6
         self.OVERHEAT_TRIES = 11
-        while self.WELCIES <= 1:
+        while self.WELCOME_INPUT != "y" and self.WELCOME_INPUT != "n":
+            self.OVERHEAT_TRIES = self.OVERHEAT_TRIES - 1
+            if self.OVERHEAT_TRIES <= 1:
                 self.OVERHEAT_TRIES = 0
                 print(self.RED + "Slow down there! Your spamming a bit, enter the chill zone.")
                 self.WAIT(5)
@@ -115,7 +123,11 @@ class game():
         self.GREEN = Fore.GREEN
         self.BLACK = Fore.BLACK
         self.YELLOW = Fore.YELLOW
-        self.W
+        self.WHITE = Fore.WHITE
+        self.USER_INPUT = input
+        self.WORD_LIST = ["PRIME", "HELLO", "WELCOME", "VIDEOGAME", "AIRPLANE", "BIRD", "COMMAND", "PASS", "ROBLOX", "BEDWARS", "PYRO", "SPIRIT", "CATCHER", "RAVEN", "JADE", "BEEKEEPER", "BEATRIX", "WARRIOR", "BOUNTY", "HUNTER", "KILL", "STREAK", "WIN", "BLOOD", "DEAL", "ARES"]
+        self.BANNED_USERS = [self.NONE]
+        self.BAN_TIME = 0
         self.COOLDOWN = 0
         self.OVERHEAT_TRIES = 0
         self.WAIT = time.sleep
