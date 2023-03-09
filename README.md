@@ -36,6 +36,8 @@ pip install colorama
 
 pip install time
 
+pip install os
+
 It should download all required modules to play the game.
 
 # Installing on Mac
