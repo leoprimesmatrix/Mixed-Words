@@ -3,65 +3,57 @@ import time
 import colorama
 from colorama import Fore,Back,Style
 import os
+from playsound import playsound
 os.system("")
 
 colorama.init()
 
 class game():
-    def admin_logged_in(self):
-        self.ADMIN_INPUT = ""
-        self.ADMIN_INPUT.lower()
-        self.PERMISSION_CODE = "2606"
-        while self.ADMIN_INPUT != "/info" and self.ADMIN_INPUT != "/givexp" and self.ADMIN_INPUT != "/givelevel":
-            self.ADMIN_INPUT = self.USER_INPUT(self.RED + "Enter your command. Contact PrimeDev#2349 for cmds, for more information, type /info. ")
-            self.ADMIN_INPUT.lower()
 
-            if self.ADMIN_INPUT == "/info":
-                self.PRINT(self.RED + "I do not list commands in here or else people would have commands easily, as for you, you tried.")
-                self.admin_logged_in()
-            if self.ADMIN_INPUT == "/givexp":
-                self.PERM_CODE = self.USER_INPUT("Enter permission code: ")
-                if self.PERM_CODE == self.PERMISSION_CODE:
-                    self.XP_GIVE = int(self.USER_INPUT("Enter amount (max 3000). Entering non-numbers will create an error specially for you. "))
-                    if self.XP_GIVE >= 3000:
-                        print(self.RED + "Nice try keed.")
-                        self.admin_logged_in()
-                    self.CURRENT_XP = self.CURRENT_XP + self.XP_GIVE
-            
-            if self.ADMIN_INPUT == "/givelevel":
-                self.PERM_CODE = self.USER_INPUT("Enter permission code.")
-                if self.PERM_CODE == self.PERMISSION_CODE:
-                    self.LEVEL_GIVE = int(self.USER_INPUT("Enter level amount (max 50). Going higher than 50 will create an error specially for you. "))
-                    if self.LEVEL_GIVE >= 50:
-                        self.PRINT(self.RED + "Nice try buddy, told you to not do that.")
-                        self.admin_logged_in()
-                    if self.LEVEL_GIVE == 50:
-                        self.PLAYER_LEVEL = 50
+    def crate(self):
+        self.CHANCE_CONTROLLER = random.randint(1,50)
+        self.LIST_CONTROLLER = 1 # random.randint(1,2)
+        self.SELECTED_REWARD = self.NONE
+        self.COLOR_THEME_CONTROLLER = random.choice(self.CRATE_REWARDS_THEME_TICKETS)
+        self.TICKET_CONTROLLER = random.choice(self.CRATE_TICKETS)
+        self.CRATE_INPUT = ""
+        self.LEGENDARY_HITS = [11, 26, 50]
+        self.EPIC_HITS = [31, 8, 6]
+        self.RARE_HITS = [4, 7, 14, 17]
+        self.UNCOMMON_HITS = [3, 5, 9, 13, 16, 21, 24]
+        self.COMMON_HITS = [1, 2, 19, 43, 44, 45, 48, 49, 34, 33]
+        self.COLOR_THEME_COLORS = ["red", "blue", "green", "black", "yellow", "magenta", "cyan", "gold"]
+        if self.LIST_CONTROLLER == 1:
+            self.SELECTED_REWARD = random.choice(self.CRATE_REWARDS)
+            if self.CHANCE_CONTROLLER in self.LEGENDARY_HITS:
+                if self.SELECTED_REWARD[1] == "Legendary":
+                    self.PRINT(self.GREEN + f"You got {self.SELECTED_REWARD[0]}! | {self.GOLD + self.SELECTED_REWARD[1]}")
 
-            if self.ADMIN_INPUT == "n":
+
+        
+
+    def locker(self):
+        self.LOCKER_INPUT = ""
+        self.LOCKER_INPUT.lower()
+        self.PRINT(self.GREEN + "Welcome to Locker! What would you like to use today?")
+        self.PRINT(self.GREEN + f"1. Lucky Crate (x{self.CRATES_OWNED})")
+        self.PRINT(self.GREEN + f"2. Activate a boost (x{self.BOOSTS_OWNED})")
+        while self.LOCKER_INPUT != "PLACEMENT_ZERO":
+            self.LOCKER_INPUT = self.USER_INPUT("Select what you would like to use. ")
+            if self.LOCKER_INPUT == "lucky crate" or self.LOCKER_INPUT == "crate" and self.CRATES_OWNED >= 1:
+                self.PRINT(self.RED + "This feature is temporarily disabled.")
+                # self.PRINT("Unboxing Crate.")
+                # self.WAIT(0.5)
+                # self.PRINT("Unboxing Crate..")
+                # self.WAIT(0.5)
+                # self.PRINT("Unboxing Crate...")
+                # self.crate()
+                self.locker()
+            if self.LOCKER_INPUT == "n" or self.LOCKER_INPUT == "exit":
                 self.welcome()
-                break
-                
-
-    def admin_login(self):
-        self.ADMIN_NAME_INPUT = ""
-        self.ADMIN_NAME_INPUT.lower()
-        self.ACCESS_TRIES = 6
-        while self.ADMIN_NAME_INPUT != "primedev":
-            self.ADMIN_NAME_INPUT = self.USER_INPUT(self.RED + "Enter your permission name to proceed. ")
-            self.ADMIN_NAME_INPUT.lower()
-            self.ACCESS_TRIES = self.ACCESS_TRIES - 1
-            if self.ACCESS_TRIES <= 1:
-                self.ACCESS_TRIES = 0
-                print(self.RED + "You are not allowed here, get out.")
-                exit()
-
-            if self.ADMIN_NAME_INPUT == "primedev":
-                self.PRINT(self.YELLOW + "Success, logging in.")
-                self.admin_logged_in()
-                break
-
-
+            if self.LOCKER_INPUT != "lucky crate" and self.LOCKER_INPUT != "crate" and self.LOCKER_INPUT != "lc" and self.LOCKER_INPUT != "boost" and self.LOCKER_INPUT != "bt":
+                self.PRINT(self.RED + "Unable to proceed. Error: Invalid option.")
+            
     def battle_pass(self):
         self.BATTLE_PASS_SEASON = self.BATTLE_PASS_SEASON1
         self.BATTLE_PASS_LEVEL = self.PLAYER_LEVEL
@@ -73,7 +65,7 @@ class game():
         self.PRINT_TIMES = 0
         sorted_levels = sorted(self.BATTLE_PASS_SEASON.keys())
         self.highest_claimed_level = 0
-        print(self.RED + f"(NEW!)" + self.GREEN + " Battle Pass Season 1" + self.RED + " (NEW!)" + self.GREEN + " (50 Levels):\n")
+        print(self.RED + f"(NEW!)" + self.GREEN + " Battle Pass Season 1" + self.BLUE + " (5 weeks remaining)" + self.GREEN + " (50 Levels):\n")
         print(self.RED + f"You're currently Level {self.BATTLE_PASS_LEVEL}.")
         for level_num in sorted_levels:
             reward = self.BATTLE_PASS_SEASON[level_num]
@@ -89,6 +81,19 @@ class game():
                 reward_string = self.GREEN + f"{reward[1]} | Claimed"
                 if reward[1] in ['Word', 'Special Word']:
                     self.WORD_LIST.append(reward[0])
+
+
+            if self.BATTLE_PASS_LEVEL >= 5:
+                self.LOCKER.append("Lucky Crate")
+
+            if self.BATTLE_PASS_LEVEL >= 30:
+                self.LOCKER.append("2x XP")
+
+            if self.BATTLE_PASS_LEVEL >= 35:
+                self.LOCKER.append("Lucky Crate")
+
+            if self.BATTLE_PASS_LEVEL >= 40:
+                self.LOCKER.append("3x XP")
 
 
             # if self.BATTLE_PASS_LEVEL >= 1:
@@ -120,11 +125,14 @@ class game():
                 self.CURRENT_XP = self.CURRENT_XP + 1000
         #end
         if " " in self.SELECT_WORD:
-            self.SCAMBLED_WORD = ' '.join(random.sample(self.SELECT_WORD, len(self.SELECT_WORD)))
+            print(self.BLUE + f"Your sentence is: {self.SELECT_WORD}")
         else:
             self.SCAMBLED_WORD = ''.join(random.sample(self.SELECT_WORD, len(self.SELECT_WORD)))
-        self.PRINT(self.BLUE + f"Your scrambled word is: {self.SCAMBLED_WORD}")
-        self.GAME_INPUT = self.USER_INPUT("Enter your guess: ")
+            self.PRINT(self.BLUE + f"Your scrambled word is: {self.SCAMBLED_WORD}")
+        if " " in self.SELECT_WORD:
+            self.GAME_INPUT = self.USER_INPUT("Enter your SPECIAL WORD: ")
+        else:
+            self.GAME_INPUT = self.USER_INPUT("Enter your guess: ")
         if self.GAME_INPUT.lower() == self.SELECT_WORD.lower():
             self.PLAY_AGAIN_INPUT = ""
             self.XP_AMOUNT = random.randint(100, 200)
@@ -142,16 +150,17 @@ class game():
                 if self.MISSION_COUNTER >= 3:
                     self.WEEKLY_MISSION1_COMPLETED = True
                     self.CURRENT_XP = self.CURRENT_XP + 8000
-                    self.LEVEL_UP_XP += 8000
             if self.CURRENT_XP >= self.LEVEL_UP_XP:
                 self.PLAYER_LEVEL = self.PLAYER_LEVEL + self.LEVEL_UP
+                self.CURRENT_XP = 0
+                self.LEVEL_UP_XP = self.LEVEL_UP_XP + 3000
                 print(self.YELLOW + f"YOU LEVELED UP TO LEVEL {self.PLAYER_LEVEL}! CONGRATS!")
                 self.PLAY_AGAIN_INPUT = self.NONE
                 while self.PLAY_AGAIN_INPUT != "y" and self.PLAY_AGAIN_INPUT != "n":
                     self.PLAY_AGAIN_INPUT = self.USER_INPUT(self.GREEN + "Play Again? (y/n) ")
 
                     if self.PLAY_AGAIN_INPUT == "y":
-                        self.queue()
+                        self.queue(0)
                         break
 
                     if self.PLAY_AGAIN_INPUT == "n":
@@ -164,7 +173,7 @@ class game():
                     self.PLAY_AGAIN_INPUT = self.USER_INPUT(self.GREEN + "Play Again? (y/n) ")
 
                     if self.PLAY_AGAIN_INPUT == "y":
-                        self.queue()
+                        self.queue(0)
                         break
 
                     if self.PLAY_AGAIN_INPUT == "n":
@@ -180,14 +189,15 @@ class game():
             self.WAIT(2)
             if self.CURRENT_XP >= self.LEVEL_UP_XP:
                 self.PLAYER_LEVEL = self.PLAYER_LEVEL + self.LEVEL_UP
+                self.CURRENT_XP = 0
+                self.LEVEL_UP_XP = self.LEVEL_UP_XP + 3000
                 print(self.YELLOW + f"YOU LEVELED UP TO LEVEL {self.PLAYER_LEVEL}! CONGRATS!")
-                self.LEVEL_UP_XP = self.LEVEL_UP_XP + 1000
                 self.PLAY_AGAIN_INPUT = ""
                 while self.PLAY_AGAIN_INPUT != "y" and self.PLAY_AGAIN_INPUT != "n":
                     self.PLAY_AGAIN_INPUT = self.USER_INPUT(self.GREEN + "It was a nice try though. Mind playing again? (y/n) ")
 
                     if self.PLAY_AGAIN_INPUT == "y":
-                        self.queue()
+                        self.queue(0)
                         break
 
                     if self.PLAY_AGAIN_INPUT == "n":
@@ -200,7 +210,7 @@ class game():
                     self.PLAY_AGAIN_INPUT = self.USER_INPUT(self.GREEN + "It was a nice try though. Mind playing again? (y/n) ")
 
                     if self.PLAY_AGAIN_INPUT == "y":
-                        self.queue()
+                        self.queue(0)
                         break
 
                     if self.PLAY_AGAIN_INPUT == "n":
@@ -208,7 +218,7 @@ class game():
                         break
 
 
-    def queue(self):
+    def queue(self, amount):
         self.QUEUE_DESC1 = "Looking for match."
         self.QUEUE_DESC2 = "Looking for match.."
         self.QUEUE_DESC3 = "Looking for match..."
@@ -217,34 +227,49 @@ class game():
         self.COOLDOWN = 1
         self.QUEUE_SELECTED_DESCRIPTION = 1
         self.QUEUE_SEARCH_TIME = random.randint(1,5)
-        self.QUEUE_FIND_CHANCE = random.randint(1,4)
+        self.QUEUE_FIND_CHANCE = random.randint(1,5)
         self.CAN_TELEPORT = False
         
-        while self.TRIES < 5:  # limit the number of attempts to find a match to 5
-            #print(self.QUEUE_FIND_CHANCE)
-            self.PRINT(self.BLUE + self.QUEUE_DESC1)
-            self.WAIT(self.COOLDOWN)
-            self.PRINT(self.BLUE + self.QUEUE_DESC2)
-            self.WAIT(self.COOLDOWN)
-            self.PRINT(self.BLUE + self.QUEUE_DESC3)
-            self.WAIT(self.COOLDOWN)
-            
-            if self.QUEUE_FIND_CHANCE in [1, 2, 3]:
-                self.DESCRIPTION = "Match found! Entering now."
-                self.PRINT(self.YELLOW + self.DESCRIPTION)
-                self.main_game()
-                break
-            else:
-                self.TRIES = self.TRIES + 1
-                self.DESCRIPTION = f"Failed finding match. Stand by! Attempt {self.TRIES}/5."
-                self.PRINT(self.RED + self.DESCRIPTION)
-                self.queue()
-                break
 
-        if self.TRIES == 5:
-            self.DESCRIPTION = f"Failed to find match after {self.TRIES} attempts. Please re-open the file, if the problem persists, please contact PrimeDev#2349 on Discord."
-            self.PRINT(self.RED + self.DESCRIPTION)
-            exit()
+        self.PRINT(self.BLUE + self.QUEUE_DESC1)
+        self.WAIT(self.COOLDOWN)
+        self.PRINT(self.BLUE + self.QUEUE_DESC2)
+        self.WAIT(self.COOLDOWN)
+        self.PRINT(self.BLUE + self.QUEUE_DESC3)
+        self.WAIT(self.COOLDOWN)
+            
+        if self.QUEUE_FIND_CHANCE in [1, 2, 3]:
+            self.DESCRIPTION = "Match found! Entering now."
+            self.PRINT(self.YELLOW + self.DESCRIPTION)
+            self.main_game()
+        else:
+            self.PRINT(self.RED + "Failed joining match! Stand by!")
+
+        # while amount < 5:  # limit the number of attempts to find a match to 5
+        #     #print(self.QUEUE_FIND_CHANCE)
+        #     self.PRINT(self.BLUE + self.QUEUE_DESC1)
+        #     self.WAIT(self.COOLDOWN)
+        #     self.PRINT(self.BLUE + self.QUEUE_DESC2)
+        #     self.WAIT(self.COOLDOWN)
+        #     self.PRINT(self.BLUE + self.QUEUE_DESC3)
+        #     self.WAIT(self.COOLDOWN)
+            
+        #     if self.QUEUE_FIND_CHANCE in [1, 2, 3]:
+        #         self.DESCRIPTION = "Match found! Entering now."
+        #         self.PRINT(self.YELLOW + self.DESCRIPTION)
+        #         self.main_game()
+        #         break
+        #     else:
+        #         amount = amount + 1
+        #         self.DESCRIPTION = f"Failed finding match. Stand by! Attempt {self.TRIES}/5."
+        #         self.PRINT(self.RED + self.DESCRIPTION)
+        #         self.queue(amount)
+        #         break
+
+        # if amount == 5:
+        #     self.DESCRIPTION = f"Failed to find match after {amount} attempts. Please try again. If the problem persists, contact PrimeDev#2349 on Discord."
+        #     self.PRINT(self.RED + self.DESCRIPTION)
+        #     self.welcome()
 
             
 
@@ -272,12 +297,12 @@ class game():
             self.WELCOME_INPUT = self.USER_INPUT(self.GREEN + self.DESCRIPTION)
             self.WELCOME_INPUT = self.WELCOME_INPUT.lower()
             if self.WELCOME_INPUT == "y":
-                self.queue()
+                self.queue(0)
 
             if self.WELCOME_INPUT == "n":
                 self.DESCRIPTION = "Come back soon! Thanks for visiting us!"
                 self.PRINT(self.BLACK + self.DESCRIPTION)
-                break
+                exit()
 
             if self.WELCOME_INPUT == "missions" or self.WELCOME_INPUT == "m":
                 self.PRINT(Fore.GREEN + "This Weeks' Missions:")
@@ -325,7 +350,14 @@ class game():
             if self.WELCOME_INPUT == "how do i get to level 50?":
                 self.PRINT("In order to complete and gain XP fast to claim all Battle Pass rewards, do missions or win games.")
 
-            if self.WELCOME_INPUT != "y" and self.WELCOME_INPUT != "n" and self.WELCOME_INPUT != "m" and self.WELCOME_INPUT != "bp" and self.WELCOME_INPUT != "lk" and self.WELCOME_INPUT != "missions" and self.WELCOME_INPUT != "battle pass" and self.WELCOME_INPUT != "locker" and self.WELCOME_INPUT != "begin game" and self.WELCOME_INPUT != "exit" and self.WELCOME_INPUT != "pr1med3v20112606" and self.WELCOME_INPUT != "release hype!" and self.WELCOME_INPUT != "prime was here" and self.WELCOME_INPUT != "/info" and self.WELCOME_INPUT != "how do i get to level 50?":
+            if self.WELCOME_INPUT == "lk" or self.WELCOME_INPUT == "locker":
+                self.locker()
+
+            if self.WELCOME_INPUT == "im so lucky":
+                self.PRINT(self.YELLOW + "crate altar enabled")
+                self.CRATES_OWNED += 1
+
+            if self.WELCOME_INPUT != "y" and self.WELCOME_INPUT != "n" and self.WELCOME_INPUT != "m" and self.WELCOME_INPUT != "bp" and self.WELCOME_INPUT != "lk" and self.WELCOME_INPUT != "missions" and self.WELCOME_INPUT != "battle pass" and self.WELCOME_INPUT != "locker" and self.WELCOME_INPUT != "begin game" and self.WELCOME_INPUT != "exit" and self.WELCOME_INPUT != "pr1med3v20112606" and self.WELCOME_INPUT != "release hype!" and self.WELCOME_INPUT != "prime was here" and self.WELCOME_INPUT != "/info" and self.WELCOME_INPUT != "how do i get to level 50?" and self.WELCOME_INPUT != "im so lucky":
                 self.DESCRIPTION = "Invalid option. Please enter a valid option to proceed."
                 self.PRINT(self.RED + self.DESCRIPTION)
     
@@ -338,6 +370,13 @@ class game():
         self.YELLOW = Fore.YELLOW
         self.MAGENTA = Fore.MAGENTA
         self.CYAN = Fore.CYAN
+        self.GOLD = Fore.LIGHTYELLOW_EX
+        self.LIGHTWHITE = Fore.LIGHTWHITE_EX
+        self.LIGHTRED = Fore.LIGHTRED_EX
+        self.LIGHTBLACK = Fore.LIGHTBLACK_EX
+        self.LIGHTMAGENTA = Fore.LIGHTMAGENTA_EX
+        self.LIGHTBLUE = Fore.LIGHTBLUE_EX
+        self.LIGHTGREEN = Fore.LIGHTGREEN_EX
         self.WHITE = Fore.WHITE
         self.USER_INPUT = input
         self.WORD_LIST = ["PRIME", "HELLO", "WELCOME", "VIDEOGAME", "AIRPLANE", "BIRD", "COMMAND", "PASS", "ROBLOX", "BEDWARS", "PYRO", "SPIRIT", "CATCHER", "RAVEN", "JADE", "BEEKEEPER", "BEATRIX", "WARRIOR", "BOUNTY", "HUNTER", "KILL", "STREAK", "WIN", "BLOOD", "DEAL", "ARES"]
@@ -362,6 +401,15 @@ class game():
         self.CURRENT_XP = 0
         self.LEVEL_UP_XP = 3000
         self.LEVEL_UP = 1
+        self.PLAYSOUND = playsound
+
+        self.LOCKER = []
+        self.CRATES_OWNED = 0
+        self.BOOSTS_OWNED = 0
+        self.CRATE_CHANCE_TYPES = ["Divine", "Mythical", "Legendary", "Epic", "Rare", "Uncommon", "Common"]
+
+
+        self.XP_BOOST_ACTIVATED = False
         self.BATTLE_PASS_SEASON1 = {
             1: ["UPDATE!", "Word"],
             2: ["BEGIN", "Word"],
@@ -378,27 +426,27 @@ class game():
             13: ["END", "Word"],
             14: ["LIFE", "Word"],
             15: ["GG", "Word"],
-            16: ["SERENDIPITY", "Word"],
-            17: ["APEX", "Word"],
-            18: ["MAVERICK", "Word"],
+            16: ["DAY'S TODAY", "Special Word"],
+            17: ["MIDNIGHT", "Word"],
+            18: ["EVENING", "Word"],
             19: ["CHAOS", "Word"],
             20: ["VVSABRO", "Word"],
             21: ["PR1ME", "Word"],
             22: ["LOL", "Word"],
-            23: ["WINSTREAK", "Word"],
+            23: ["XP HUNTING", "Special Word"],
             24: ["SLAY", "Word"],
-            25: ["ELDERTREE GG", "Special Word"],
-            26: ["JADE I'M THE BEST", "Special Word"],
-            27: ["BEEKEEPER THANKS!", "Special Word"],
-            28: ["ALCHEMIST FAILED...", "Special Word"],
-            29: ["CROCOWOLF CMERE!", "Special Word"],
-            30: ["VULCAN LOVE + 300 XP", "Boost"],
-            31: ["METAL DETECTOR FOUND IT!", "Special Word"],
-            32: ["Jake YOU'RE A LEGEND!", "Special Word"],
-            33: ["Marco Discount", "Special Word"],
-            34: ["Pyro BURN THE BED", "Special Word"],
+            25: ["PRIME JUST KIDDING!", "Special Word"],
+            26: ["DAVID I'M CRAZY!", "Special Word"],
+            27: ["XBOT IM CATCHING UP...", "Special Word"],
+            28: ["PRIME FAILED...", "Special Word"],
+            29: ["VVSABRO DIAMOND", "Special Word"],
+            30: ["2x XP", "Boost"],
+            31: ["CODEBRO FOUND IT!", "Special Word"],
+            32: ["CARROT'S CLASSROOM", "Special Word"],
+            33: ["PRIME ALL GOOD", "Special Word"],
+            34: ["DAVID ITS TIME", "Special Word"],
             35: ["Lucky Crate", "Crate"],
-            36: ["Raven RIP...", "Special Word"],
+            36: ["PRIME RIP...", "Special Word"],
             37: ["CMERE KEED", "Special Word"],
             38: ["DAVID IS CRAZY", "Special Word"],
             39: ["NICE TRY", "Special Word"],
@@ -412,7 +460,7 @@ class game():
             47: ["SCAMMER BRO", "Special Word"],
             48: ["CARROT FARMED MYSELF!", "Special Word"],
             49: ["CARROT UWU", "Special Word"],
-            50: ["PRIMEDEV GAME ON!", "Special Word"]
+            50: ["GET PRIME'D", "Special Word"]
         }
 
 
@@ -425,7 +473,8 @@ class game():
             "Special Word": self.MAGENTA,
             "Reward": self.NONE,
             "New Mission": self.RED,
-            "Default": self.WHITE
+            "Default": self.WHITE,
+            "Secret Word": self.LIGHTBLACK
         }
         self.REWARD_COLOR_NUMBERS = {
             1: self.RED,
